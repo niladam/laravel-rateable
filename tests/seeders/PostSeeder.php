@@ -13,5 +13,4 @@ class PostSeeder
         Post::create(['id' => 3, 'title' => 'Third post', 'body' => 'This is the third post!']);
         Post::reguard();
     }
-
 }

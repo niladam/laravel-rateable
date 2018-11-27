@@ -13,5 +13,4 @@ class Post extends Model
      * @var array
      */
     public $fillable = ['title', 'body'];
-
 }

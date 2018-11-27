@@ -2,7 +2,6 @@
 
 class RatingRelationsTest extends RateableTestCase
 {
-
     public function testRateableIsAMorphTo()
     {
         $rating = new Rating();
@@ -14,5 +13,4 @@ class RatingRelationsTest extends RateableTestCase
         $rating = new Rating();
         $this->assertInstanceOf('Illuminate\Database\Eloquent\Relations\BelongsTo', $rating->user());
     }
-
 }

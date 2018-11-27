@@ -4,7 +4,6 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class RatingMigrator
 {
-
     public function up()
     {
         DB::schema()->dropIfExists('ratings');
@@ -13,7 +12,7 @@ class RatingMigrator
             $table->timestamps();
             $table->integer('rating');
             $table->morphs('rateable');
-            $table->integer('user_id')->unsigned();
+            $table->integer('user_id')->unsigned()->nullable()->default(null);
             $table->index('user_id');
             $table->index('rateable_id');
             $table->index('rateable_type');
@@ -25,5 +24,4 @@ class RatingMigrator
     {
         DB::schema()->drop('ratings');
     }
-
 }

@@ -4,7 +4,6 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class PostMigrator
 {
-
     public function up()
     {
         DB::schema()->dropIfExists('posts');
@@ -20,5 +19,4 @@ class PostMigrator
     {
         DB::schema()->drop('posts');
     }
-
 }

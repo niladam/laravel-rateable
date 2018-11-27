@@ -1,4 +1,6 @@
-<?php namespace willvincent\Rateable;
+<?php
+
+namespace willvincent\Rateable;
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
