@@ -4,7 +4,6 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class UserSeeder
 {
-
     public function run()
     {
         DB::table('users')->delete();
@@ -13,5 +12,4 @@ class UserSeeder
         User::create(['id' => 2]);
         User::reguard();
     }
-
 }

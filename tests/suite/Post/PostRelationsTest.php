@@ -2,7 +2,6 @@
 
 class PostRelationsTest extends RateableTestCase
 {
-
     public function testRatingsIsAMorphMany()
     {
         $post = new Post();

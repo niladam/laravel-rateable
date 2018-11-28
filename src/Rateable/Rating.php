@@ -1,4 +1,6 @@
-<?php namespace willvincent\Rateable;
+<?php
+
+namespace willvincent\Rateable;
 
 use Config;
 use Illuminate\Database\Eloquent\Model;
@@ -10,7 +12,7 @@ class Rating extends Model
      *
      * @var array
      */
-    public $fillable = ['rating'];
+    public $fillable = ['rating', 'text', 'name'];
 
     /**
      * @return mixed

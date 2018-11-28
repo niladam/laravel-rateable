@@ -1,4 +1,6 @@
-<?php namespace willvincent\Rateable;
+<?php
+
+namespace willvincent\Rateable;
 
 trait Rateable
 {

@@ -2,7 +2,6 @@
 
 class UserRatingsTest extends RateableTestCase
 {
-
     public function testUserAverageRating()
     {
         Rating::unguard();
@@ -23,7 +22,6 @@ class UserRatingsTest extends RateableTestCase
         $this->assertEquals('1.0', Post::find(2)->userAverageRating());
     }
 
-
     public function testUserSumRating()
     {
         Rating::unguard();
@@ -43,5 +41,4 @@ class UserRatingsTest extends RateableTestCase
         $this->assertEquals(2, Post::find(2)->userSumRating);
         $this->assertEquals(2, Post::find(2)->userSumRating());
     }
-
 }

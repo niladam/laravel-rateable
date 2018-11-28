@@ -4,7 +4,6 @@ use Illuminate\Database\Capsule\Manager as DB;
 
 class UserMigrator
 {
-
     public function up()
     {
         DB::schema()->dropIfExists('users');
@@ -18,5 +17,4 @@ class UserMigrator
     {
         DB::schema()->drop('users');
     }
-
 }

@@ -1,4 +1,6 @@
-<?php namespace willvincent\Rateable;
+<?php
+
+namespace willvincent\Rateable;
 
 use Illuminate\Console\Command;
 
@@ -63,7 +65,7 @@ class MigrationCommand extends Command
     {
         $migration_file = database_path('migrations').'/'.date('Y_m_d_His').'_create_ratings_table.php';
 
-        if (! file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
+        if ( ! file_exists($migration_file) && $fs = fopen($migration_file, 'x')) {
             fwrite($fs, file_get_contents(__DIR__.'/../migrations/create_ratings_table.php'));
             fclose($fs);
             return true;

@@ -1,10 +1,11 @@
-<?php namespace willvincent\Rateable;
+<?php
+
+namespace willvincent\Rateable;
 
 use Illuminate\Support\ServiceProvider;
 
 class RateableServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -20,7 +21,7 @@ class RateableServiceProvider extends ServiceProvider
         $this->commands('command.rateable.migration');
         $this->app->bind('command.rateable.migration', function ($app) {
             return new MigrationCommand();
-        }, TRUE);
+        }, true);
     }
 
     /**
